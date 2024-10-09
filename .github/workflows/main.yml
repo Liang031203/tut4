@@ -1,0 +1,19 @@
+name: Run tests
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up JDK 21
+      uses: actions/setup-java@v2
+      with:
+        distribution: 'adopt' # 指定 Java 发行版
+        java-version: '21' # 指定 Java 版本
+    - name: Run tests
+      run: |
+        cd "D:/t4/tutorial4-main"
+        mvn clean test
