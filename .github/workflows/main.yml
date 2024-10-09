@@ -15,5 +15,4 @@ jobs:
         java-version: '21' # 指定 Java 版本
     - name: Run tests
       run: |
-        cd "D:/t4/tutorial4-main"
         mvn clean test
